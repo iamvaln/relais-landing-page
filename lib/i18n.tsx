@@ -144,26 +144,6 @@ const en = {
     eyebrow: "Why we built Relais",
     title: "Built by people who take your trust seriously.",
     body: "Relais began with a simple, painful realization: when someone we cared about passed, their digital life became a locked door. We built Relais so that no family has to choose between grieving and fighting for access — and so that everyone can hand things over with dignity.",
-    quotes: [
-      {
-        quote:
-          "I set it up in an afternoon. For the first time, I feel calm about what happens to my accounts.",
-        name: "Adjoua K.",
-        role: "Scenario — a member",
-      },
-      {
-        quote:
-          "I was named as a trusted contact. When the time came, I knew exactly what to do — no chaos.",
-        name: "Hervé M.",
-        role: "Scenario — a trusted contact",
-      },
-      {
-        quote:
-          "I scrutinized the security model. Zero-knowledge and an independent switch — they got the hard parts right.",
-        name: "Rodrigue T.",
-        role: "Scenario — an early adopter",
-      },
-    ],
     stats: [
       { value: "Zero-knowledge", label: "We can never read your data" },
       { value: "Autonomous", label: "Works even if Relais disappears" },
@@ -350,26 +330,6 @@ const fr: Content = {
     eyebrow: "Pourquoi nous avons créé Relais",
     title: "Conçu par des gens qui prennent votre confiance au sérieux.",
     body: "Relais est né d'un constat simple et douloureux : au décès d'un proche, sa vie numérique devenait une porte close. Nous avons créé Relais pour qu'aucune famille n'ait à choisir entre faire son deuil et se battre pour un accès — et pour que chacun puisse transmettre avec dignité.",
-    quotes: [
-      {
-        quote:
-          "Je l'ai configuré en un après-midi. Pour la première fois, je suis serein quant à mes comptes.",
-        name: "Adjoua K.",
-        role: "Scénario — un membre",
-      },
-      {
-        quote:
-          "J'ai été désigné comme personne de confiance. Le moment venu, je savais exactement quoi faire — aucun chaos.",
-        name: "Hervé M.",
-        role: "Scénario — une personne de confiance",
-      },
-      {
-        quote:
-          "J'ai scruté le modèle de sécurité. Zero-knowledge et déclencheur indépendant — l'essentiel est bien fait.",
-        name: "Rodrigue T.",
-        role: "Scénario — un adopteur précoce",
-      },
-    ],
     stats: [
       { value: "Zero-knowledge", label: "Nous ne pouvons jamais lire vos données" },
       { value: "Autonome", label: "Fonctionne même si Relais disparaît" },

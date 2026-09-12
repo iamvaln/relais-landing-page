@@ -1,6 +1,5 @@
 "use client"
 
-import { Quote } from "lucide-react"
 import { useLanguage } from "@/lib/i18n"
 import { Reveal } from "@/components/reveal"
 
@@ -21,30 +20,6 @@ export function Credibility() {
             {t.credibility.body}
           </p>
         </Reveal>
-
-        <div className="mt-14 grid gap-5 md:grid-cols-3">
-          {t.credibility.quotes.map((q, i) => (
-            <Reveal
-              key={q.name}
-              delay={i * 100}
-              className="flex flex-col rounded-2xl border border-border bg-background p-6"
-            >
-              <Quote className="size-6 text-gold" />
-              <p className="mt-4 flex-1 leading-relaxed text-foreground text-pretty">
-                {q.quote}
-              </p>
-              <div className="mt-5 flex items-center gap-3">
-                <span className="flex size-9 items-center justify-center rounded-full bg-gold text-sm font-semibold text-gold-foreground">
-                  {q.name.charAt(0)}
-                </span>
-                <div className="text-sm">
-                  <p className="font-medium text-foreground">{q.name}</p>
-                  <p className="text-muted-foreground">{q.role}</p>
-                </div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
 
         <div className="mt-12 grid gap-4 sm:grid-cols-3">
           {t.credibility.stats.map((s, i) => (
