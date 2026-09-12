@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og"
 
-export const alt = "Relais — Pass the Relais, not the chaos."
+export const alt = "Relais — Passe le relais, pas le chaos."
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
@@ -55,7 +55,7 @@ export default function OpengraphImage() {
           lineHeight: 1.15,
         }}
       >
-        Pass the Relais, not the chaos.
+        Passe le relais, pas le chaos.
       </div>
       <div
         style={{
@@ -67,7 +67,7 @@ export default function OpengraphImage() {
           lineHeight: 1.4,
         }}
       >
-        Securely hand off your digital accounts to the people you trust — exactly as you decided.
+        Transmettez vos comptes numériques aux personnes en qui vous avez confiance — en toute sécurité, selon vos volontés.
       </div>
     </div>,
     size,
