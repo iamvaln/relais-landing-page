@@ -71,7 +71,7 @@ const en = {
       {
         num: "01",
         title: "Register your accounts",
-        body: "List what matters — email, social, banking, subscriptions — and decide, for each one, what should happen: close it, transfer it, or hand over access.",
+        body: "List what matters — email, social, banking, subscriptions — with the access and instructions your people will need, and how urgent each one is: right away, within thirty days, or at their discretion.",
       },
       {
         num: "02",
@@ -118,7 +118,7 @@ const en = {
       features: [
         "Create your account in minutes",
         "Register your first accounts",
-        "Add a trusted contact",
+        "Add two trusted contacts",
         "No card required to begin",
       ],
       cta: "Start free",
@@ -131,7 +131,7 @@ const en = {
       priceNote: "Annual price announced soon",
       features: [
         "Unlimited accounts & instructions",
-        "Multiple trusted contacts",
+        "Up to five trusted contacts",
         "The autonomous relay switch",
         "Priority support",
       ],
@@ -149,19 +149,19 @@ const en = {
         quote:
           "I set it up in an afternoon. For the first time, I feel calm about what happens to my accounts.",
         name: "Adjoua K.",
-        role: "Early member",
+        role: "Scenario — a member",
       },
       {
         quote:
           "I was named as a trusted contact. When the time came, I knew exactly what to do — no chaos.",
         name: "Hervé M.",
-        role: "Trusted contact",
+        role: "Scenario — a trusted contact",
       },
       {
         quote:
           "I scrutinized the security model. Zero-knowledge and an independent switch — they got the hard parts right.",
         name: "Rodrigue T.",
-        role: "Early adopter",
+        role: "Scenario — an early adopter",
       },
     ],
     stats: [
@@ -188,7 +188,7 @@ const en = {
       },
       {
         q: "What if I lose my phone or my PIN?",
-        a: "You can restore access through Relais's recovery process, and your data stays protected throughout.",
+        a: "Your 12 recovery words restore everything on a new phone — your vault, your contacts, your plan. Keep them safe: because not even Relais can read your data, no one can rebuild your account without them.",
       },
     ],
   },
@@ -277,7 +277,7 @@ const fr: Content = {
       {
         num: "01",
         title: "Enregistrez vos comptes",
-        body: "Listez ce qui compte — e-mail, réseaux sociaux, banque, abonnements — et décidez, pour chacun, ce qui doit se passer : le fermer, le transmettre ou en remettre l'accès.",
+        body: "Listez ce qui compte — e-mail, réseaux sociaux, banque, abonnements — avec les accès et les consignes dont vos proches auront besoin, et l'urgence de chacun : tout de suite, sous trente jours, ou à leur discrétion.",
       },
       {
         num: "02",
@@ -324,7 +324,7 @@ const fr: Content = {
       features: [
         "Créez votre compte en quelques minutes",
         "Enregistrez vos premiers comptes",
-        "Ajoutez une personne de confiance",
+        "Ajoutez deux personnes de confiance",
         "Aucune carte requise pour débuter",
       ],
       cta: "Commencer gratuitement",
@@ -337,7 +337,7 @@ const fr: Content = {
       priceNote: "Tarif annuel annoncé bientôt",
       features: [
         "Comptes & instructions illimités",
-        "Plusieurs personnes de confiance",
+        "Jusqu'à cinq personnes de confiance",
         "Le déclencheur de relais autonome",
         "Support prioritaire",
       ],
@@ -355,19 +355,19 @@ const fr: Content = {
         quote:
           "Je l'ai configuré en un après-midi. Pour la première fois, je suis serein quant à mes comptes.",
         name: "Adjoua K.",
-        role: "Membre des débuts",
+        role: "Scénario — un membre",
       },
       {
         quote:
           "J'ai été désigné comme personne de confiance. Le moment venu, je savais exactement quoi faire — aucun chaos.",
         name: "Hervé M.",
-        role: "Personne de confiance",
+        role: "Scénario — une personne de confiance",
       },
       {
         quote:
           "J'ai scruté le modèle de sécurité. Zero-knowledge et déclencheur indépendant — l'essentiel est bien fait.",
         name: "Rodrigue T.",
-        role: "Adopteur précoce",
+        role: "Scénario — un adopteur précoce",
       },
     ],
     stats: [
@@ -394,7 +394,7 @@ const fr: Content = {
       },
       {
         q: "Et si je perds mon téléphone ou mon PIN ?",
-        a: "Vous pouvez rétablir l'accès via le processus de récupération de Relais, et vos données restent protégées tout du long.",
+        a: "Vos 12 mots de récupération restaurent tout sur un nouveau téléphone — le coffre, vos contacts, votre plan. Gardez-les précieusement : comme même Relais ne peut pas lire vos données, personne ne peut reconstituer votre compte sans eux.",
       },
     ],
   },
@@ -436,7 +436,8 @@ type LanguageContextValue = {
 const LanguageContext = createContext<LanguageContextValue | null>(null)
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("en")
+  // Français par défaut (Cameroun d'abord) ; l'anglais si le navigateur le demande.
+  const [lang, setLangState] = useState<Lang>("fr")
 
   useEffect(() => {
     const stored = window.localStorage.getItem("relais-lang") as Lang | null
@@ -445,7 +446,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       return
     }
     const browser = navigator.language?.toLowerCase() ?? ""
-    setLangState(browser.startsWith("fr") ? "fr" : "en")
+    setLangState(browser.startsWith("en") ? "en" : "fr")
   }, [])
 
   useEffect(() => {

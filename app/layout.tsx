@@ -15,9 +15,11 @@ const fraunces = Fraunces({
 })
 
 export const metadata: Metadata = {
+  // À remplacer par le domaine définitif : sert de base aux images de partage (OpenGraph, Twitter).
+  metadataBase: new URL('https://relais-landing-page.vercel.app'),
   title: 'Relais — Passe le relais, pas le chaos',
   description:
-    'Relais lets the people you trust access, close, or transfer your digital accounts the day you are gone — securely, and exactly as you decided. Zero-knowledge. Mobile-first.',
+    'Le jour où vous ne serez plus là, les personnes en qui vous avez confiance pourront accéder à vos comptes numériques, les fermer ou les transmettre — en toute sécurité, selon vos volontés. Zero-knowledge. Mobile d’abord.',
 }
 
 export const viewport: Viewport = {
@@ -32,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="fr"
       className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} bg-background`}
     >
       <body className="font-sans antialiased">
