@@ -20,6 +20,7 @@ const en = {
     pricing: "Pricing",
     faq: "FAQ",
     cta: "Protect my loved ones",
+    theme: "Switch between light and dark",
   },
   hero: {
     eyebrow: "Digital estate, handled with care",
@@ -206,6 +207,7 @@ const fr: Content = {
     pricing: "Tarifs",
     faq: "FAQ",
     cta: "Protéger mes proches",
+    theme: "Basculer entre clair et sombre",
   },
   hero: {
     eyebrow: "Votre vie numérique, gérée avec soin",
