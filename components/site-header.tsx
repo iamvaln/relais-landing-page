@@ -6,6 +6,7 @@ import { useLanguage } from "@/lib/i18n"
 import { RelaisLogo } from "@/components/relais-logo"
 import { CtaButton } from "@/components/cta-button"
 import { LanguageToggle } from "@/components/language-toggle"
+import { ThemeToggle } from "@/components/theme-toggle"
 import { cn } from "@/lib/utils"
 
 export function SiteHeader() {
@@ -54,6 +55,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <LanguageToggle />
           <CtaButton href="#pricing" withArrow={false} className="hidden sm:inline-flex">
             {t.nav.cta}

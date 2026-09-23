@@ -48,7 +48,7 @@ export function Pricing() {
         {/* Premium */}
         <Reveal
           delay={100}
-          className="relative flex flex-col overflow-hidden rounded-3xl border border-gold/50 bg-ink p-7 text-ink-foreground shadow-xl shadow-foreground/10"
+          className="relative flex flex-col overflow-hidden rounded-3xl border border-gold/50 bg-ink p-7 text-ink-foreground shadow-xl shadow-foreground/10 dark:shadow-black/40"
         >
           <span className="absolute right-5 top-5 rounded-full bg-gold px-3 py-1 text-xs font-semibold text-gold-foreground">
             {premium.tag}

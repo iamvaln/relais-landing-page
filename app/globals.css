@@ -97,6 +97,48 @@
   --sidebar-ring: oklch(0.77 0.135 71);
 }
 
+/* Mode sombre : la même palette chaude, renversée. Fond espresso, texte crème,
+   doré inchangé ; les sections « ink » s'enfoncent un cran plus bas que le fond.
+   Jamais de noir pur ni de teinte froide. */
+.dark {
+  color-scheme: dark;
+  --background: oklch(0.19 0.018 60);
+  --foreground: oklch(0.93 0.014 84);
+  --card: oklch(0.235 0.02 62);
+  --card-foreground: oklch(0.93 0.014 84);
+  --popover: oklch(0.235 0.02 62);
+  --popover-foreground: oklch(0.93 0.014 84);
+  --primary: oklch(0.8 0.075 72);
+  --primary-foreground: oklch(0.2 0.03 60);
+  --secondary: oklch(0.28 0.022 64);
+  --secondary-foreground: oklch(0.9 0.014 84);
+  --muted: oklch(0.27 0.02 64);
+  --muted-foreground: oklch(0.72 0.025 74);
+  --accent: oklch(0.32 0.035 70);
+  --accent-foreground: oklch(0.92 0.014 84);
+  --destructive: oklch(0.68 0.16 35);
+  --border: oklch(0.31 0.02 66);
+  --input: oklch(0.31 0.02 66);
+  --ring: oklch(0.77 0.135 71);
+  --chart-1: oklch(0.77 0.135 71);
+  --chart-2: oklch(0.74 0.06 80);
+  --chart-3: oklch(0.8 0.075 72);
+  --chart-4: oklch(0.62 0.07 70);
+  --chart-5: oklch(0.5 0.05 60);
+  --gold: oklch(0.77 0.135 71);
+  --gold-foreground: oklch(0.28 0.04 60);
+  --ink: oklch(0.135 0.018 58);
+  --ink-foreground: oklch(0.94 0.014 84);
+  --sidebar: oklch(0.19 0.018 60);
+  --sidebar-foreground: oklch(0.93 0.014 84);
+  --sidebar-primary: oklch(0.8 0.075 72);
+  --sidebar-primary-foreground: oklch(0.2 0.03 60);
+  --sidebar-accent: oklch(0.28 0.022 64);
+  --sidebar-accent-foreground: oklch(0.9 0.014 84);
+  --sidebar-border: oklch(0.31 0.02 66);
+  --sidebar-ring: oklch(0.77 0.135 71);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

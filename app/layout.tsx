@@ -1,5 +1,6 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
+import { ThemeProvider } from 'next-themes'
 import { Geist, Geist_Mono, Fraunces } from 'next/font/google'
 import './globals.css'
 
@@ -23,8 +24,11 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'light',
-  themeColor: '#FAF8F5',
+  colorScheme: 'light dark',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#FAF8F5' },
+    { media: '(prefers-color-scheme: dark)', color: '#1F1A15' },
+  ],
 }
 
 export default function RootLayout({
@@ -35,10 +39,14 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} bg-background`}
     >
       <body className="font-sans antialiased">
-        {children}
+        {/* Thème : celui du système par défaut, mémorisé dans le navigateur dès que l'on bascule. */}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem storageKey="relais-theme" disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

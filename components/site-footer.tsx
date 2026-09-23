@@ -3,6 +3,7 @@
 import { useLanguage } from "@/lib/i18n"
 import { RelaisLogo } from "@/components/relais-logo"
 import { LanguageToggle } from "@/components/language-toggle"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export function SiteFooter() {
   const { t } = useLanguage()
@@ -45,7 +46,8 @@ export function SiteFooter() {
             <p className="mt-4 max-w-xs font-heading text-lg italic text-ink-foreground/70">
               {t.footer.tagline}
             </p>
-            <div className="mt-5">
+            <div className="mt-5 flex items-center gap-2">
+              <ThemeToggle onInk />
               <LanguageToggle onInk />
             </div>
           </div>
